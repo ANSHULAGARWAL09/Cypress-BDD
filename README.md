@@ -5,16 +5,16 @@
 ## Features
 
 - Given I open the browser
-- Then I am on the Wesite main Page
-- When I click on Create an Account link
-- Then I verify that I landed on the 'Create New Customer Account'
-- Then I filled the FirstName LastName Email and Password 
-- When I click on Create an Account Submit button
-- Then I verify the Account is Successfully Created 
+- When I am on the Wesite main Page
+- Then I click on Create an Account link
+- And I verify that I landed on the 'Create New Customer Account'
+- When I filled the FirstName LastName Email and Password 
+- Then I click on Create an Account Submit button
+- And I verify the Account is Successfully Created 
 - Then I logout from the Website and Verify user is Logged Out
 - When I click on Sign In Button
 - Then I filled the Email and Password 
-- When I click on Submit Button 
+- And I click on Submit Button 
 - Then I verify that I am able to Successfully SignIn to the Already Created Account
 
 ![image](https://github.com/user-attachments/assets/f404f0e9-afbb-4210-be30-e65412912551)
