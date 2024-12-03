@@ -1,0 +1,14 @@
+{
+	"reporterEnabled": "cypress-mochawesome-reporter",
+	"cypressMochawesomeReporterReporterOptions": {
+        "reportDir": "cypress/reports",
+		"charts": true,
+		"reportPageTitle": "BDD Incubytes",
+		"embeddedScreenshots": true,
+		"inlineAssets": true,
+		"videoOnFailOnly": false,
+        "overwrite": false,
+        "html": true,
+        "json": false
+	}
+}
