@@ -1,4 +1,4 @@
-const { Given , And,  Then , When} = require( "@badeball/cypress-cucumber-preprocessor");
+const { Given , Then , When} = require( "@badeball/cypress-cucumber-preprocessor");
 import CreateAccountPage from "../PageObjects/CreateAccountPage";
 import HomePage from "../PageObjects/HomePage"
 import SignInPage from "../PageObjects/SignInPage";
@@ -13,12 +13,12 @@ Given ("I open the browser", () => {
     cy.url().should('include','magento');
 })
 
-When ("I am on the Wesite main Page", () => {
+Then ("I am on the Wesite main Page", () => {
     homePage.logo.should("exist");
     
 })
 
-And ("I click on Create an Account link", () => {
+When ("I click on Create an Account link", () => {
     homePage.createAccountLink.click({ force: true });
 })
 
@@ -29,19 +29,19 @@ Then ('I verify that I landed on the {string}', actualPageTitle=>{
 
 })
 
-When ('I filled the FirstName LastName Email and Password',() => {
+Then ('I filled the FirstName LastName Email and Password',() => {
     const { email, password } = createAccountPage.fillInformation();
     user =  cy.wrap({ email, password })
     cy.wrap({ email, password }).as('user');
     console.log(user)
 })
 
-Then ('I click on Create an Account Submit button',() => {
+When ('I click on Create an Account Submit button',() => {
     createAccountPage.submitToCreateAccount();
 
 })
 
-And ('I verify the Account is Successfully Created', () => {
+Then ('I verify the Account is Successfully Created', () => {
     cy.get('div:contains("Thank you for registering")').should("exist");
 
 })
@@ -63,11 +63,11 @@ Then ('I filled the Email and Password', function() {
     signInPage.login(email, password);
 })
 
-And ('I click on Submit Button', () => {
+When ('I click on Submit Button', () => {
     signInPage.clickToSubmit()
 
 })
 
-Then ('I verify that I am able to Successfully SignIn to the Already Created Account', () => {
+When ('I verify that I am able to Successfully SignIn to the Already Created Account', () => {
     signInPage.pageTitle.should("exist");
 });
