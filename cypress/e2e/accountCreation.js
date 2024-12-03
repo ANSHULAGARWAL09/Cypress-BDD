@@ -1,4 +1,4 @@
-const { Given , Then , When} = require( "@badeball/cypress-cucumber-preprocessor");
+const { Given , And, Then , When} = require( "@badeball/cypress-cucumber-preprocessor");
 import CreateAccountPage from "../PageObjects/CreateAccountPage";
 import HomePage from "../PageObjects/HomePage"
 import SignInPage from "../PageObjects/SignInPage";
@@ -13,35 +13,35 @@ Given ("I open the browser", () => {
     cy.url().should('include','magento');
 })
 
-Then ("I am on the Wesite main Page", () => {
+When ("I am on the Wesite main Page", () => {
     homePage.logo.should("exist");
     
 })
 
-When ("I click on Create an Account link", () => {
+Then ("I click on Create an Account link", () => {
     homePage.createAccountLink.click({ force: true });
 })
 
-Then ('I verify that I landed on the {string}', actualPageTitle=>{
+And ('I verify that I landed on the {string}', actualPageTitle=>{
     createAccountPage.createAccountTitle.invoke('text').then((pageTitle) => {
         expect(pageTitle.trim()).to.equal(actualPageTitle);
     })
 
 })
 
-Then ('I filled the FirstName LastName Email and Password',() => {
+When ('I filled the FirstName LastName Email and Password',() => {
     const { email, password } = createAccountPage.fillInformation();
     user =  cy.wrap({ email, password })
     cy.wrap({ email, password }).as('user');
     console.log(user)
 })
 
-When ('I click on Create an Account Submit button',() => {
+Then ('I click on Create an Account Submit button',() => {
     createAccountPage.submitToCreateAccount();
 
 })
 
-Then ('I verify the Account is Successfully Created', () => {
+And ('I verify the Account is Successfully Created', () => {
     cy.get('div:contains("Thank you for registering")').should("exist");
 
 })
@@ -63,7 +63,7 @@ Then ('I filled the Email and Password', function() {
     signInPage.login(email, password);
 })
 
-When ('I click on Submit Button', () => {
+And ('I click on Submit Button', () => {
     signInPage.clickToSubmit()
 
 })
