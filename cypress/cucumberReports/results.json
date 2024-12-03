@@ -1,1 +1,180 @@
-[]
+[
+  {
+    "description": "I want to validate the Account Creation and Signing on the website \"https://magento.softwaretestingboard.com/\"",
+    "elements": [
+      {
+        "description": "",
+        "id": "test-the-sign-up-flow;as-a-user-i-should-be-able-to-create-the-account-successfully",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "As a user I should be able to Create the Account Successfully",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open the browser",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6472000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I am on the Wesite main Page",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 176000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I click on Create an Account link",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4933000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I verify that I landed on the 'Create New Customer Account'",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 191000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I filled the FirstName LastName Email and Password",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1746000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I click on Create an Account Submit button",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4124000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I verify the Account is Successfully Created",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1556000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I logout from the Website and Verify user is Logged Out",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4966000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click on Sign In Button",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5286000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I filled the Email and Password",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 955000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click on Submit Button",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2551000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I verify that I am able to Successfully SignIn to the Already Created Account",
+            "match": {
+              "location": "webpack://bdd-automation-framework/cypress/e2e/accountCreation.js:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "test-the-sign-up-flow",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Test the sign up flow",
+    "tags": [],
+    "uri": "cypress/e2e/accountCreation.feature"
+  }
+]

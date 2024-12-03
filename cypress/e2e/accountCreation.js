@@ -1,10 +1,11 @@
-const { Given , And, Then , When} = require( "@badeball/cypress-cucumber-preprocessor");
+const { Given , Then , When} = require( "@badeball/cypress-cucumber-preprocessor");
 import CreateAccountPage from "../PageObjects/CreateAccountPage";
 import HomePage from "../PageObjects/HomePage"
 import SignInPage from "../PageObjects/SignInPage";
 const homePage = new HomePage()
 const createAccountPage = new CreateAccountPage()
 const signInPage = new SignInPage()
+const And = Then; // Or alias to Given/When as needed
 let user = null
     
 //test steps 
@@ -47,7 +48,7 @@ And ('I verify the Account is Successfully Created', () => {
 })
 
 Then ('I logout from the Website and Verify user is Logged Out', () => {
-    homePage.myProfile.click();
+    homePage.myProfile.click({ force: true });
     homePage.signOutLink.click();
     homePage.signOutConfirmation.should("exist");
 
