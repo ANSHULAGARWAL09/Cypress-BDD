@@ -8,4 +8,4 @@ This repository contains test cases for verifying the compose and send functiona
 - Gmail's response to empty fields and invalid logins
 
 ## Test Cases
-Test cases are documented in the `Gmail-Test-Cases.xlsx` file under the `test_cases` folder.
+Test cases are documented in the `Manual Assessment - Incubyte.xlsx` file under the `Manual_Assessment` folder.
