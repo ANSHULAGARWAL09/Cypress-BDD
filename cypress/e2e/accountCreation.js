@@ -43,7 +43,7 @@ Then ('I click on Create an Account Submit button',() => {
 })
 
 And ('I verify the Account is Successfully Created', () => {
-    cy.get('div:contains("Thank you for registering")').should("exist");
+    createAccountPage.accountCreationSuccessful.should("exist");
 
 })
 
