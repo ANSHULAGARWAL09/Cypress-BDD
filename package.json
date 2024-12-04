@@ -7,9 +7,7 @@
     "test": "npx cypress run",
     "headTest": "npm run test --headed",
     "chromeTest": "npm run test --browser chrome",
-    "recordDashBoardTest": "npx cypress run --record --key 79694452-a67b-4573-9699-339617205423",
-    "GreenKartTest": "npx cypress run --spec \"cypress/integration/GreenKart/*\"",
-    "SmokeTest": "npx cypress run --spec \"cypress/integration/GreenKart/Test1.js\""
+    "recordDashBoardTest": "npx cypress run --record --key 79694452-a67b-4573-9699-339617205423"
   },
   "cypress-cucumber-preprocessor": {
     "json": {

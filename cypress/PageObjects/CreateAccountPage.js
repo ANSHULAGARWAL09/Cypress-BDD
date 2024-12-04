@@ -31,6 +31,10 @@ class CreateAccountPage {
     return cy.get(".submit");
   }
 
+  get accountSuccessfullyCreated(){
+    return cy.get('div:contains("Thank you for registering")');
+  }
+
   /* Fills the registration form with random data and submits it*/
   fillInformation() {
     const firstName = faker.person.firstName();
